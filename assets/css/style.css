@@ -1,0 +1,239 @@
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'raleway', 'open sans';
+}
+
+body{
+    background-color: #222 ;
+}
+
+#conteiner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 500px;
+    background-color: lightgreen;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(20, 50px);
+    grid-template-rows: repeat(10, 50px);
+    overflow: hidden;
+    
+}
+
+.grid-dark{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(70, 153, 70) ;
+}
+
+.fruit{
+    position: relative;
+    width: 35px;
+    opacity: 0;
+    animation: fruit .5s ease-in-out infinite alternate;
+}
+
+@keyframes fruit {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-4px);
+    }
+}
+
+
+
+.grid-ligth{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(101, 194, 101);
+}
+
+#snake {
+    background-color: rgb(190, 78, 44) ;
+
+}
+
+.snake-segment {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(190, 78, 44) ;
+
+}
+
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.olhos {
+    position: absolute;
+    right: 11px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.olho {
+    width: 9px;
+    height: 9px;
+
+    outline: 3px solid rgb(190, 78, 44) ;
+    background-color: #fff;
+    position: relative;
+}
+
+.dentro {
+    width:7px;
+    height: 7px;
+    background-color: #000;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+}
+
+.nariz {
+    position: absolute;
+    right: 5px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.narina {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(126, 48, 25) ;
+}
+
+
+#score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+    margin-top: 20px;
+}
+
+.pontos{
+    width: 100px;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.records{
+    width: 100px;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#começo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background-color: #f1f1f1b2;
+    padding: 50px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#começo div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#começo img{
+    width: 200px;
+    margin-top: 30px;
+}
+
+#começo h2{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+#começo h3{
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+#começo.close{
+    display: none;
+}
+
+#lose{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    background-color: #222222d5;
+
+    border-radius: 2rem;
+    color: #f1f1f1;
+
+}
+
+#lose button{
+    padding: 10px 20px;
+    border-radius: 2rem;
+    border: 1px solid #111;
+
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+#lose button:hover{
+    background-color: #111;
+    border-color: #f1f1f1;
+
+    color: #f1f1f1;
+}

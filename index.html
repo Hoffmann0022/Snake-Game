@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/snake-icon.png">
+    <title>Snake Game</title>
+</head>
+
+<body>
+
+    <div id="score">
+
+        <div class="pontos">
+            <h4>Pontos:</h4>
+            <h4 id="points">0</h4>
+        </div>
+
+        <h1>|</h1>
+
+        <div class="records">
+            <h4>Record:</h4>
+            <h4 id="record">0</h4>
+        </div>
+        
+    </div>
+
+    <div id="conteiner">
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/maca.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/banana.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/abacaxi.png" alt=""></div>
+        <div class="grid-ligth"><img class="fruit" src="./assets/img/laranja.png" alt=""></div>
+        <div class="grid-dark"><img class="fruit" src="./assets/img/morango.png" alt=""></div>
+        
+    
+        
+
+        <div id="snake">
+            <div class="snake-segment head">
+                <div class="olhos">
+                    <div class="olho">
+                        <div class="dentro"></div>
+                    </div>
+                    <div class="olho">
+                        <div class="dentro"></div>
+                    </div>
+                </div>
+    
+                <div class="nariz">
+                    <div class="narina"></div>
+                    <div class="narina"></div>
+                </div>
+            </div>
+            <div class="snake-segment"></div>
+            <div class="snake-segment last"></div>
+        </div>
+    </div>
+
+    <div id="começo">
+        <h2>Clique em qualquer tecla para começar </h2>
+
+        <div>
+            <h3>Controles</h3>
+            <img src="./assets/img/controles.png" alt="">
+        </div>
+    </div>
+
+
+    <div id="lose">
+        <h1>Você perdeu 😔</h1>
+
+        <div id="score">
+
+            <div class="pontos">
+                <h4>Pontos:</h4>
+                <h4 id="finalScore">0</h4>
+            </div>
+    
+            <h1>|</h1>
+    
+            <div class="records">
+                <h4>Record:</h4>
+                <h4 id="finalRecord">0</h4>
+            </div>
+            
+        </div>
+
+
+        <button id="reset">Jogar novamente</button>
+
+    </div>
+
+    <script src="./assets/js/game.js" defer></script>
+</body>
+
+</html>
